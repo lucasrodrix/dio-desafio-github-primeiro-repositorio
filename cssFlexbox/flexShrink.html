@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - FlexShrink</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+        }
+        .item{
+            margin: 5px;
+            background-color: orange;
+            font-size: 25px;
+            text-align: center;
+        }
+        .fs-0{
+            flex-shrink: 0;
+        }
+        .fs-1{
+            flex-shrink: 1;
+        }
+        .fs-2{
+            flex-shrink: 2;
+            flex-basis: 100px;
+        }
+        .fs-3{
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+        .fg-1{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <h2>FlexShrink 1</h2>
+    <div class="flex-container">
+        <div class="item fs-1 fg-1">A</div>
+        <div class="item fs-1 fg-1">B</div>
+        <div class="item fs-1 fg-1">C</div>
+        <div class="item fs-1 fg-1">D</div>
+        <div class="item fs-1 fg-1">E</div>
+    </div>
+
+    <h2>FlexShrink</h2>
+    <div class="flex-container">
+        <div class="item fs-1 fg-1">A</div>
+        <div class="item fs-1 fg-1">BBBBBBBBB</div>
+        <div class="item fs-1 fg-1">C</div>
+        <div class="item fs-1 fg-1">D</div>
+        <div class="item fs-1 fg-1">E</div>
+    </div>
+
+    <h2>FlexShrink 0 / Basis</h2>
+    <div class="flex-container">
+        <div class="item fs-0 fg-1">A</div>
+        <div class="item fs-0 fg-1">BBBB</div>
+        <div class="item fs-0 fg-1">CCCCC CCCC</div>
+        <div class="item fs-0 fg-1">DDDDD DDDDDDDDDDD</div>
+        <div class="item fs-0 fg-1">E</div>
+    </div>
+
+    <h2>FlexShrink / Basis</h2>
+    <div class="flex-container">
+        <div class="item fs-0 fg-1">A</div>
+        <div class="item fs-1 fg-1">BB BB</div>
+        <div class="item fs-3 fg-1">CCC CCC CCC</div>
+        <div class="item fs-2 fg-1">DDDD DDDD DDDDDDDD</div>
+        <div class="item fs-1 fg-1">E</div>
+    </div>
+</body>
+</html>
