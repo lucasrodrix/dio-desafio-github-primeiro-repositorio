@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Order</title>
+    <style>
+        .flex-container{
+            display: flex;
+            max-width: 300px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+        .item{
+            flex: 1;
+            background: brown;
+            color: white;
+            text-align: center;
+            font-size: 25px;
+            margin: 5px;
+            order: 0;
+        }
+        .order1{
+            order: 1;
+        }
+        .order2{
+            order: 2;
+        }
+        .order3{
+            order: 3;
+        }
+        .direction{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h3>Row</h3>
+    <p>Order 0</p>
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5r</div>
+        <div class="item">6l</div>
+    </div>
+
+    <p>Order Diferentes</p>
+    <div class="flex-container">
+        <div class="item order2">1</div>
+        <div class="item order3">2</div>
+        <div class="item order2">3</div>
+        <div class="item">4</div>
+        <div class="item order1">5r</div>
+        <div class="item order3">6l</div>
+    </div>
+
+    <h3>Column</h3>
+    <p>Order 0</p>
+    <div class="flex-container direction">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5r</div>
+        <div class="item">6l</div>
+    </div>
+
+    <p>Order Diferentes</p>
+    <div class="flex-container direction">
+        <div class="item order2">1</div>
+        <div class="item order3">2</div>
+        <div class="item order2">3</div>
+        <div class="item">4</div>
+        <div class="item order1">5r</div>
+        <div class="item order3">6l</div>
+    </div>
+</body>
+</html>
